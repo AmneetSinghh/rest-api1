@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+    <h1>Add new Task</h1>
+    <form class="" action="/add" method="post">
+        <div class="form-group">
+            <label>Task Name</label>
+            <input class="form-control" type="text" name="taskname">
+            <label>Task Description</label>
+            <input class="form-control" type="text" name="taskdes">
+            <label>Creator</label>
+            <input class="form-control" type="text" name="creator">
+            <label>Duration</label>
+            <input class="form-control" type="text" name="duration">
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">Publish</button>
+    </form>
+
+    <%- include("partials/footer"); -%>

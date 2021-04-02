@@ -1,0 +1,72 @@
+<%- include("partials/header"); -%>
+
+    <% tasks_list%>
+
+
+        <h1>Total Tasks =
+            <%=tasks_list.length%>
+        </h1>
+        <%  tasks_list.forEach(function(tasks_list){ %>
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="taskname">
+                            <h2>
+                                <%= tasks_list.name %>
+                            </h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="leftcolumn">
+                                <div class="card">
+                                    <h5>Task description </h5>
+                                    <p>
+                                        <%= tasks_list.description %>
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <h5>Create Time </h5>
+                                    <p>
+                                        <%= tasks_list.created_at %>
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <h5>Delete time </h5>
+                                    <p>
+                                        <%= tasks_list.delete_at %>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rightcolumn">
+                                <div class="card">
+                                    <h2>Author</h2>
+                                    <p>
+                                        <%= tasks_list.creator %>
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <h2>Duration</h2>
+                                    <p>
+                                        <%= tasks_list.duration %> Minutes
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <br>
+            <hr>
+            <% }) %>
+
+
+
+                <%- include("partials/footer"); -%>
